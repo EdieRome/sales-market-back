@@ -9,5 +9,6 @@ namespace SalesMarket.Common.Contracts.Factories
         ISalesService SalesService { get; }
         IStockService StockService { get; }
         IStoreService StoreService { get; }
+        IUserService UserService { get; }
     }
 }

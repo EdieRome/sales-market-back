@@ -9,5 +9,6 @@ namespace SalesMarket.Common.Contracts.Factories
         public ICustomerItemRepository CustomerItemRepository { get; }
         public IStoreRepository StoreRepository { get; }
         public IItemStoreRepository ItemStoreRepository { get; }
+        public IUserRepository UserRepository { get; }
     }
 }

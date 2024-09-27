@@ -15,6 +15,7 @@ namespace SalesMarket.Services
         private ISalesService? _salesService = null;
         private IStockService? _stockService = null;
         private IStoreService? _storeService = null;
+        private IUserService? _userService = null;
 
         public ServicesCore(IUnitOfWork unitOfWork, IMapper mapper)
         {
@@ -31,5 +32,7 @@ namespace SalesMarket.Services
         public IStockService StockService => _stockService ??= new StockService(_unitOfWork, _mapper);
 
         public IStoreService StoreService => _storeService ??= new StoreService(_unitOfWork, _mapper);
+
+        public IUserService UserService => _userService ??= new UserService(_unitOfWork, _mapper);
     }
 }

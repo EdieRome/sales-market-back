@@ -14,12 +14,14 @@ namespace SalesMarket.Common.Automap
             CreateMap<Item, ItemResponse>().ReverseMap();
             CreateMap<ItemStore, ItemStoreResponse>().ReverseMap();
             CreateMap<Store, StoreResponse>().ReverseMap();
+            CreateMap<User, UserResponse>().ReverseMap();
 
             CreateMap<Customer, CustomerRequest>().ReverseMap();
             CreateMap<CustomerItem, CustomerItemRequest>().ReverseMap();
             CreateMap<Item, ItemRequest>().ReverseMap();
             CreateMap<ItemStore, ItemStoreRequest>().ReverseMap();
             CreateMap<Store, StoreRequest>().ReverseMap();
+            CreateMap<User, UserRequest>().ReverseMap();
         }
     }
 }

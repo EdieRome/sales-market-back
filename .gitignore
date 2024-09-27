@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/SalesMarket.Api/bin/Debug/net8.0
+/SalesMarket.Api/obj
+/SalesMarket.Common/obj
+/SalesMarket.Repositories/obj
+/SalesMarket.Services/obj
+/SalesMarket.Common/bin/Debug/net8.0
+/SalesMarket.Repositories/bin/Debug/net8.0
+/SalesMarket.Services/bin/Debug/net8.0

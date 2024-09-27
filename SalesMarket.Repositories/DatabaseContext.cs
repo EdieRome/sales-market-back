@@ -10,6 +10,7 @@ namespace SalesMarket.Repositories
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemStore> ItemStores { get; set; }
         public DbSet<CustomerItem> CustomerItems { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 

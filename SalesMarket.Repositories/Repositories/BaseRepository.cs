@@ -17,14 +17,14 @@ namespace SalesMarket.Repositories.Repositories
 
         public virtual async Task<IEnumerable<Dto>> GetAllAsync()
         {
-            var response = await _context.Set<Entity>().ToListAsync();
-            return _mapper.Map<List<Dto>>(response);
+            var result = await _context.Set<Entity>().ToListAsync();
+            return _mapper.Map<List<Dto>>(result);
         }
 
         public virtual async Task<Dto> GetByIdAsync(int id)
         {
-            var response = await _context.Set<Entity>().FindAsync(id);
-            return _mapper.Map<Dto>(response);
+            var result = await _context.Set<Entity>().FindAsync(id);
+            return _mapper.Map<Dto>(result);
         }
 
         public virtual async Task AddAsync(Entity entity)
@@ -41,10 +41,10 @@ namespace SalesMarket.Repositories.Repositories
 
         public virtual async Task DeleteAsync(int id)
         {
-            var articulo = await _context.Set<Entity>().FindAsync(id);
-            if (articulo != null)
+            var item = await _context.Set<Entity>().FindAsync(id);
+            if (item is not null)
             {
-                _context.Set<Entity>().Remove(articulo);
+                _context.Set<Entity>().Remove(item);
                 await _context.SaveChangesAsync();
             }
         }

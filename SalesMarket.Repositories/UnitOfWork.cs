@@ -15,6 +15,7 @@ namespace SalesMarket.Repositories
         private IItemStoreRepository? _itemStoreRepository = null;
         private IStoreRepository? _storeRepository = null;
         private ICustomerItemRepository? _customerItemRepository = null;
+        private IUserRepository? _userRepository = null;
 
         public UnitOfWork(DatabaseContext context, IMapper mapper)
         {
@@ -27,6 +28,7 @@ namespace SalesMarket.Repositories
         public ICustomerItemRepository CustomerItemRepository => _customerItemRepository ??= new CustomerItemRepository(_context, _mapper);
         public IStoreRepository StoreRepository => _storeRepository ??= new StoreRepository(_context, _mapper);
         public IItemStoreRepository ItemStoreRepository => _itemStoreRepository ??= new ItemStoreRepository(_context, _mapper);
+        public IUserRepository UserRepository => _userRepository ??= new UserRepository(_context, _mapper);
 
         public void Dispose()
         {
